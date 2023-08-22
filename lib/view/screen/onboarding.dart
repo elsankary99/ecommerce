@@ -1,5 +1,7 @@
 import 'package:ecommerce/core/constant/color.dart';
-import 'package:ecommerce/data/datasource/static/static.dart';
+import 'package:ecommerce/view/widget/onboarding/custombutton.dart';
+import 'package:ecommerce/view/widget/onboarding/customslider.dart';
+import 'package:ecommerce/view/widget/onboarding/dotcontroller.dart';
 import 'package:flutter/material.dart';
 
 class OnBoarding extends StatelessWidget {
@@ -7,34 +9,26 @@ class OnBoarding extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       backgroundColor: AppColor.white,
       body: SafeArea(
-          child: PageView.builder(
-        itemCount: onboardingList.length,
-        itemBuilder: (context, i) => Column(
-          children: [
-            const SizedBox(height: 30),
-            Text(
-              onboardingList[i].title!,
-              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          child: Column(
+        children: [
+          Expanded(
+            flex: 3,
+            child: CustomSliderOnBoarding(),
+          ),
+          Expanded(
+            flex: 1,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                CustomDotControllerOnBoarding(),
+                CustomButtonOnBoarding()
+              ],
             ),
-            const SizedBox(height: 65),
-            Image.asset(
-              onboardingList[i].image!,
-              height: 250,
-              width: 200,
-              fit: BoxFit.cover,
-            ),
-            const SizedBox(height: 65),
-            Text(
-              onboardingList[i].body!,
-              textAlign: TextAlign.center,
-              style: const TextStyle(
-                  height: 2, fontSize: 16, color: AppColor.grey),
-            ),
-          ],
-        ),
+          )
+        ],
       )),
     );
   }

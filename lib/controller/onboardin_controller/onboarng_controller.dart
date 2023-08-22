@@ -1,3 +1,5 @@
+import 'package:ecommerce/core/constant/router.dart';
+import 'package:ecommerce/data/datasource/static/static.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -9,14 +11,20 @@ abstract class OnBoardingController extends GetxController {
 class OnBoardingControllerImp extends OnBoardingController {
   late PageController pageController;
   int currentPage = 0;
+
+  //!/next
   @override
   next() {
     currentPage++;
-    pageController.animateToPage(currentPage,
-        duration: const Duration(milliseconds: 600), curve: Curves.easeInOut);
-    // update();
+    if (currentPage > onboardingList.length - 1) {
+      Get.offAllNamed(AppRouter.login);
+    } else {
+      pageController.animateToPage(currentPage,
+          duration: const Duration(milliseconds: 600), curve: Curves.easeInOut);
+    }
   }
 
+  //!/onPageChanged
   @override
   onPageChanged(int index) {
     currentPage = index;

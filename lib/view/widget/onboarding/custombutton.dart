@@ -1,10 +1,10 @@
+import 'package:ecommerce/controller/onboardin_controller/onboarng_controller.dart';
 import 'package:ecommerce/core/constant/color.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-class CustomButtonOnBoarding extends StatelessWidget {
-  const CustomButtonOnBoarding({
-    super.key,
-  });
+class CustomButtonOnBoarding extends GetView<OnBoardingControllerImp> {
+  const CustomButtonOnBoarding({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,9 @@ class CustomButtonOnBoarding extends StatelessWidget {
       width: 250,
       height: 40,
       child: ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            controller.next();
+          },
           style: ElevatedButton.styleFrom(
               backgroundColor: AppColor.primaryColor,
               textStyle: const TextStyle(fontSize: 16),

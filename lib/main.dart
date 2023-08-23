@@ -1,4 +1,5 @@
 import 'package:ecommerce/core/constant/color.dart';
+import 'package:ecommerce/core/localization/change_local.dart';
 import 'package:ecommerce/core/localization/translations.dart';
 import 'package:ecommerce/core/service/services.dart';
 import 'package:ecommerce/router.dart';
@@ -18,7 +19,9 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    LocaleController controller = Get.put(LocaleController());
     return GetMaterialApp(
+      locale: controller.language,
       translations: MyTranslation(),
       title: 'Flutter Demo',
       theme: ThemeData(

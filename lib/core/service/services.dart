@@ -9,6 +9,6 @@ class AppService extends GetxService {
   }
 }
 
-instance() async {
+initialServices() async {
   await Get.putAsync(() => AppService().init());
 }

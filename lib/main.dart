@@ -1,14 +1,14 @@
 import 'package:ecommerce/core/constant/color.dart';
 import 'package:ecommerce/core/localization/translations.dart';
-import 'package:ecommerce/core/service/service.dart';
+import 'package:ecommerce/core/service/services.dart';
 import 'package:ecommerce/router.dart';
-import 'package:ecommerce/view/screen/onboarding.dart';
+import 'package:ecommerce/view/screen/auth/language.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await initialService();
+  await initialServices();
   runApp(const MyApp());
 }
 
@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
           )),
       debugShowCheckedModeBanner: false,
       routes: routes,
-      home: const OnBoarding(),
+      home: const Language(),
     );
   }
 }

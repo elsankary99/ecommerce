@@ -20,7 +20,7 @@ class CustomSliderOnBoarding extends GetView<OnBoardingControllerImp> {
           const SizedBox(height: 30),
           Text(
             onboardingList[i].title!,
-            style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            style: Theme.of(context).textTheme.titleLarge,
           ),
           const SizedBox(height: 65),
           Image.asset(
@@ -30,12 +30,9 @@ class CustomSliderOnBoarding extends GetView<OnBoardingControllerImp> {
             fit: BoxFit.fill,
           ),
           const SizedBox(height: 65),
-          Text(
-            onboardingList[i].body!,
-            textAlign: TextAlign.center,
-            style:
-                const TextStyle(height: 2, fontSize: 16, color: AppColor.grey),
-          ),
+          Text(onboardingList[i].body!,
+              textAlign: TextAlign.center,
+              style: Theme.of(context).textTheme.titleSmall),
         ],
       ),
     );

@@ -1,3 +1,4 @@
+import 'package:ecommerce/core/constant/color.dart';
 import 'package:ecommerce/router.dart';
 import 'package:ecommerce/view/screen/onboarding.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +16,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(primarySwatch: Colors.blue),
+      theme: ThemeData(
+          fontFamily: "PlayfairDisplay",
+          primarySwatch: Colors.blue,
+          textTheme: const TextTheme(
+            titleSmall:
+                TextStyle(height: 2, fontSize: 16, color: AppColor.grey),
+            titleLarge: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          )),
       debugShowCheckedModeBanner: false,
       routes: routes,
       home: const OnBoarding(),

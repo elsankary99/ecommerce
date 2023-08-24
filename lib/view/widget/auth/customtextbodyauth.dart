@@ -13,7 +13,7 @@ class CustomTextBodyAuth extends StatelessWidget {
         Text(
           titleLarge,
           textAlign: TextAlign.center,
-          style: Theme.of(context).textTheme.titleLarge,
+          style: Theme.of(context).textTheme.titleLarge!.copyWith(fontSize: 24),
         ),
         const SizedBox(height: 10),
         Align(

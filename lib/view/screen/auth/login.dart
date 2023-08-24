@@ -1,4 +1,6 @@
 import 'package:ecommerce/core/constant/color.dart';
+import 'package:ecommerce/view/widget/auth/customtextbodyauth.dart';
+import 'package:ecommerce/view/widget/auth/customtextformauth.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatelessWidget {
@@ -22,37 +24,24 @@ class Login extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
-        child: Column(children: [
-          const SizedBox(height: 20),
-          Text(
-            "Welcome Back",
-            style: Theme.of(context).textTheme.titleLarge,
+        child: ListView(children: const [
+          SizedBox(height: 20),
+          CustomTextBodyAuth(
+            titleLarge: "Welcome Back",
+            titleSmall:
+                "Sign In With Your Email And Password \n OR Continue With Social Media",
           ),
-          const SizedBox(height: 10),
-          Align(
-            alignment: Alignment.center,
-            child: Text(
-              "Sign In With Your Email And Password \n OR Continue With Social Media",
-              textAlign: TextAlign.center,
-              style:
-                  Theme.of(context).textTheme.titleSmall!.copyWith(height: 1.5),
-            ),
+          SizedBox(height: 50),
+          CustomTextFormAuth(
+            labelText: "Email",
+            hintText: "Enter Your Email",
+            icon: Icons.email_outlined,
           ),
-          const SizedBox(height: 25),
-          TextFormField(
-            decoration: InputDecoration(
-                suffixIcon: const Icon(Icons.email_outlined),
-                border:
-                    OutlineInputBorder(borderRadius: BorderRadius.circular(30)),
-                contentPadding:
-                    const EdgeInsets.symmetric(vertical: 5, horizontal: 30),
-                label: Container(
-                    margin: const EdgeInsets.symmetric(horizontal: 10),
-                    child: const Text("Email")),
-                floatingLabelBehavior: FloatingLabelBehavior.always,
-                hintText: "Enter Your Email",
-                hintStyle: const TextStyle(fontSize: 14)),
-          )
+          CustomTextFormAuth(
+            labelText: "Password",
+            hintText: "Enter Your Password",
+            icon: Icons.lock_outlined,
+          ),
         ]),
       ),
     );

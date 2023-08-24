@@ -1,7 +1,6 @@
 import 'package:ecommerce/core/localization/change_local.dart';
 import 'package:ecommerce/view/widget/language/custombuttonlang.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_utils/get_utils.dart';
 import 'package:get/get.dart';
 
 class Language extends GetView<LocaleController> {

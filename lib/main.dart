@@ -3,7 +3,7 @@ import 'package:ecommerce/core/localization/change_local.dart';
 import 'package:ecommerce/core/localization/translations.dart';
 import 'package:ecommerce/core/service/services.dart';
 import 'package:ecommerce/router.dart';
-import 'package:ecommerce/view/screen/auth/login.dart';
+import 'package:ecommerce/view/screen/onboarding.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
           )),
       debugShowCheckedModeBanner: false,
       routes: routes,
-      home: const Login(),
+      home: const OnBoarding(),
     );
   }
 }

@@ -10,6 +10,7 @@ class CustomButtonAuth extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: 40,
+      width: double.infinity,
       child: ElevatedButton(
           onPressed: onPressed,
           style: ElevatedButton.styleFrom(

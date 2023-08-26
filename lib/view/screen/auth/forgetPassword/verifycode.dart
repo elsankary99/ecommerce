@@ -12,9 +12,9 @@ class VerifyCode extends StatelessWidget {
   Widget build(BuildContext context) {
     VerifyCodeControllerImp controller = Get.put(VerifyCodeControllerImp());
     return Scaffold(
-      backgroundColor: AppColor.white,
+      backgroundColor: AppColor.backGroundColor,
       appBar: AppBar(
-        backgroundColor: AppColor.white,
+        backgroundColor: AppColor.backGroundColor,
         centerTitle: true,
         title: Text(
           "Verification Code",

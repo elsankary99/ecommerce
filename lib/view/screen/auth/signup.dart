@@ -14,9 +14,9 @@ class SignUP extends StatelessWidget {
   Widget build(BuildContext context) {
     SignUpControllerImp controller = Get.put(SignUpControllerImp());
     return Scaffold(
-      backgroundColor: AppColor.white,
+      backgroundColor: AppColor.backGroundColor,
       appBar: AppBar(
-        backgroundColor: AppColor.white,
+        backgroundColor: AppColor.backGroundColor,
         centerTitle: true,
         title: Text(
           "Sign Up",
@@ -63,7 +63,9 @@ class SignUP extends StatelessWidget {
           ),
           CustomButtonAuth(
             text: "Sign Up",
-            onPressed: () {},
+            onPressed: () {
+              controller.signUp();
+            },
           ),
           const SizedBox(height: 30),
           CustomTextSignUpOrSignIn(

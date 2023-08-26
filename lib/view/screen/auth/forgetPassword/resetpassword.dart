@@ -19,7 +19,7 @@ class ResetPassword extends StatelessWidget {
         backgroundColor: AppColor.backGroundColor,
         centerTitle: true,
         title: Text(
-          "Reset Password",
+          "reset_password".tr,
           style: Theme.of(context)
               .textTheme
               .titleLarge!
@@ -31,26 +31,26 @@ class ResetPassword extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
         child: ListView(children: [
           const SizedBox(height: 15),
-          const CustomTextBodyAuth(
-            titleLarge: "New Password",
-            titleSmall: "Please Enter new Password",
+          CustomTextBodyAuth(
+            titleLarge: "new_password".tr,
+            titleSmall: "please_enter_new_password".tr,
           ),
           const SizedBox(height: 30),
           CustomTextFormAuth(
             controller: controller.password,
-            labelText: "Password",
-            hintText: "Enter Your Password",
+            labelText: "password".tr,
+            hintText: "enter_your_password".tr,
             icon: Icons.lock_outline,
           ),
           CustomTextFormAuth(
             controller: controller.rePassword,
-            labelText: "Password",
-            hintText: "RE Enter Your Password",
+            labelText: "password".tr,
+            hintText: "re_enter_your_password".tr,
             icon: Icons.lock_outline,
           ),
           const SizedBox(height: 15),
           CustomButtonAuth(
-            text: "Save",
+            text: "save".tr,
             onPressed: () {
               controller.goToSuccessResetPassword();
             },

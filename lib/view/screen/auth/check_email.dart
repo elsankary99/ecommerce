@@ -18,7 +18,7 @@ class CheckEmail extends StatelessWidget {
         backgroundColor: AppColor.backGroundColor,
         centerTitle: true,
         title: Text(
-          "Check Email",
+          "check_email".tr,
           style: Theme.of(context)
               .textTheme
               .titleLarge!
@@ -30,21 +30,21 @@ class CheckEmail extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
         child: ListView(children: [
           const SizedBox(height: 15),
-          const CustomTextBodyAuth(
-            titleLarge: "Success SignUp",
-            titleSmall:
-                "please Enter Your Email Address To \n Receive A verification code",
+          CustomTextBodyAuth(
+            titleLarge: "success_sign_up".tr,
+            titleSmall: 'please_enter_your_email'.tr,
+            // "please Enter Your Email Address To \n Receive A verification code",
           ),
           const SizedBox(height: 30),
           CustomTextFormAuth(
             controller: controller.email,
-            labelText: "Email",
-            hintText: "Enter Your Email",
+            labelText: "email".tr,
+            hintText: "enter_your_email".tr,
             icon: Icons.email_outlined,
           ),
           const SizedBox(height: 15),
           CustomButtonAuth(
-            text: "Check",
+            text: "check".tr,
             onPressed: () {
               controller.goToSuccessSignUp();
             },

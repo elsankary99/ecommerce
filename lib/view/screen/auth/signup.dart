@@ -19,7 +19,7 @@ class SignUP extends StatelessWidget {
         backgroundColor: AppColor.backGroundColor,
         centerTitle: true,
         title: Text(
-          "Sign Up",
+          "sign_up".tr,
           style: Theme.of(context)
               .textTheme
               .titleLarge!
@@ -31,22 +31,21 @@ class SignUP extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
         child: ListView(children: [
           const SizedBox(height: 15),
-          const CustomTextBodyAuth(
-            titleLarge: "Welcome Back",
-            titleSmall:
-                "Sign Up With Your Email And Password \n OR Continue With Social Media",
-          ),
+          CustomTextBodyAuth(
+              titleLarge: "welcome_back".tr, titleSmall: 'sign_in_with_email'.tr
+              // "Sign Up With Your Email And Password \n OR Continue With Social Media",
+              ),
           const SizedBox(height: 30),
           CustomTextFormAuth(
             controller: controller.userName,
-            labelText: "Username",
+            labelText: "username".tr,
             hintText: "Enter Your Username",
             icon: Icons.person_3_outlined,
           ),
           CustomTextFormAuth(
             controller: controller.email,
-            labelText: "Email",
-            hintText: "Enter Your Email",
+            labelText: "email".tr,
+            hintText: "enter_your_email".tr,
             icon: Icons.email_outlined,
           ),
           CustomTextFormAuth(
@@ -57,12 +56,12 @@ class SignUP extends StatelessWidget {
           ),
           CustomTextFormAuth(
             controller: controller.password,
-            labelText: "Password",
-            hintText: "Enter Your Password",
+            labelText: "password".tr,
+            hintText: "enter_your_password".tr,
             icon: Icons.lock_outlined,
           ),
           CustomButtonAuth(
-            text: "Sign Up",
+            text: "sign_up".tr,
             onPressed: () {
               controller.signUp();
             },
@@ -72,8 +71,8 @@ class SignUP extends StatelessWidget {
             onTap: () {
               controller.goToSignIn();
             },
-            textOne: "Already have an account ?   ",
-            textTwo: 'Sign In',
+            textOne: "already_have_an_account".tr,
+            textTwo: 'sign_in'.tr,
           )
         ]),
       ),

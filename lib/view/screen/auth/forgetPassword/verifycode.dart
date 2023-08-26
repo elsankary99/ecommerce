@@ -17,7 +17,7 @@ class VerifyCode extends StatelessWidget {
         backgroundColor: AppColor.backGroundColor,
         centerTitle: true,
         title: Text(
-          "Verification Code",
+          "verification_code".tr,
           style: Theme.of(context)
               .textTheme
               .titleLarge!
@@ -29,10 +29,10 @@ class VerifyCode extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
         child: ListView(children: [
           const SizedBox(height: 15),
-          const CustomTextBodyAuth(
-            titleLarge: "Check Code ",
+          CustomTextBodyAuth(
+            titleLarge: "check_code".tr,
             titleSmall:
-                "Please Enter The Digit Code \n Sent To elsankary@gmail.com",
+                "${'please_enter_the_digit_code'.tr}elsankary@gmail.com",
           ),
           const SizedBox(height: 30),
           OtpTextField(

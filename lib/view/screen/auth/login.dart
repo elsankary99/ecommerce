@@ -33,35 +33,34 @@ class Login extends StatelessWidget {
         child: ListView(children: [
           const LogoAuth(),
           const SizedBox(height: 15),
-          const CustomTextBodyAuth(
-            titleLarge: "Welcome Back",
-            titleSmall:
-                "Sign In With Your Email And Password \n OR Continue With Social Media",
-          ),
+          CustomTextBodyAuth(
+              titleLarge: "welcome_back".tr, titleSmall: 'sign_in_with_email'.tr
+              // "Sign In With Your Email And Password \n OR Continue With Social Media",
+              ),
           const SizedBox(height: 30),
           CustomTextFormAuth(
             controller: controller.email,
-            labelText: "Email",
-            hintText: "Enter Your Email",
+            labelText: "email".tr,
+            hintText: "enter_your_email".tr,
             icon: Icons.email_outlined,
           ),
           CustomTextFormAuth(
             controller: controller.password,
-            labelText: "Password",
-            hintText: "Enter Your Password",
+            labelText: "password".tr,
+            hintText: "enter_your_password".tr,
             icon: Icons.lock_outlined,
           ),
           InkWell(
             onTap: () {
               controller.goToForgetPassword();
             },
-            child: Text("Forget Password ? ",
+            child: Text("forget_password".tr,
                 textAlign: TextAlign.end,
                 style: Theme.of(context).textTheme.titleSmall),
           ),
           const SizedBox(height: 15),
           CustomButtonAuth(
-            text: "Sign In",
+            text: "sign_in".tr,
             onPressed: () {},
           ),
           const SizedBox(height: 30),
@@ -69,8 +68,8 @@ class Login extends StatelessWidget {
             onTap: () {
               controller.goToSignUp();
             },
-            textOne: "Don't have an account ?   ",
-            textTwo: 'Sign Up',
+            textOne: "${'dont_have_an_account'.tr}   ",
+            textTwo: 'sign_up'.tr,
           )
         ]),
       ),

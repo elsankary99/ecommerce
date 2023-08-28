@@ -5,18 +5,22 @@ class CustomTextFormAuth extends StatelessWidget {
   final String hintText;
   final IconData icon;
   final TextEditingController controller;
-  const CustomTextFormAuth(
-      {super.key,
-      required this.labelText,
-      required this.hintText,
-      required this.icon,
-      required this.controller});
+  final String? Function(String?) validator;
+  const CustomTextFormAuth({
+    super.key,
+    required this.labelText,
+    required this.hintText,
+    required this.icon,
+    required this.controller,
+    required this.validator,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(bottom: 25),
       child: TextFormField(
+        validator: validator,
         controller: controller,
         decoration: InputDecoration(
           label: Container(

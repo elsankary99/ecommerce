@@ -21,12 +21,14 @@ class Language extends GetView<LocaleController> {
               CustomButtonLang(
                   onPressed: () {
                     controller.changeLang("ar");
+                    controller.goToOnboarding();
                   },
                   title: 'arabic'.tr),
               const SizedBox(height: 20),
               CustomButtonLang(
                   onPressed: () {
                     controller.changeLang("en");
+                    controller.goToOnboarding();
                   },
                   title: 'english'.tr),
             ],

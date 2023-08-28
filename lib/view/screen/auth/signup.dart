@@ -39,7 +39,7 @@ class SignUP extends StatelessWidget {
           CustomTextFormAuth(
             controller: controller.userName,
             labelText: "username".tr,
-            hintText: "Enter Your Username",
+            hintText: "enter_your_username".tr,
             icon: Icons.person_3_outlined,
           ),
           CustomTextFormAuth(
@@ -50,8 +50,8 @@ class SignUP extends StatelessWidget {
           ),
           CustomTextFormAuth(
             controller: controller.phone,
-            labelText: "Phone",
-            hintText: "Enter Your Phone",
+            labelText: "phone".tr,
+            hintText: "enter_your_phone".tr,
             icon: Icons.phone_android_outlined,
           ),
           CustomTextFormAuth(

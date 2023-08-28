@@ -20,7 +20,10 @@ class CustomButtonOnBoarding extends GetView<OnBoardingControllerImp> {
               textStyle: const TextStyle(fontSize: 16),
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12))),
-          child: const Text('continue')),
+          child: Text(
+            'continue'.tr,
+            style: const TextStyle(fontWeight: FontWeight.bold),
+          )),
     );
   }
 }

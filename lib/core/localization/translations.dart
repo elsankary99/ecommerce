@@ -30,7 +30,7 @@ class MyTranslation extends Translations {
           "success_sign_up": "نجاح انشاء الحساب",
           "welcome_back": "مرحبًا بعودتك",
           "sign_in_with_email":
-              "قم بتسجيل الدخول باستخدام بريدك الإلكتروني وكلمة المرور \n أو تابع باستخدام وسائل التواصل الاجتماعي",
+              "قم بتسجيل الدخول باستخدام بريدك الإلكتروني وكلمة المرور أو تابع باستخدام \n وسائل التواصل الاجتماعي",
           "sign_in": "تسجيل الدخول",
           "dont_have_an_account": "ليس لديك حساب ؟",
           "sign_up": "انشاء حساب",
@@ -39,6 +39,19 @@ class MyTranslation extends Translations {
           "phone": "رقم الهاتف",
           "enter_your_phone": "أدخل هاتفك",
           "already_have_an_account": "هل لديك حساب بالفعل؟",
+          "continue": "استمر",
+          "choose_product": "اختر المنتج",
+          "we_have_hundred_product":
+              "لدينا 100 ألف منتج ، اختر \n منتجك من المتجر الالكتروني \n الخاص بنا",
+          "easy_and_safe_payment": "دفع سهل وآمن",
+          "track_your_order": "تتبع طلبك",
+          "fast_delivery": "توصيل سريع",
+          "best_tracker_has_been_used":
+              "تم استخدام أفضل جهاز تعقب لتتبع طلبك. \n ستعرف مكان منتجك في الوقت الحالي.",
+          "reliable_and_fast_delivery":
+              "تسليم موثوق وسريع. نحن \n نقوم بتسليم منتجك بأسرع \n طريقة ممكنة.",
+          "easy_checkout_safe_payment":
+              "طريقة دفع سهلة و امنة \n. موثوق به من قبل عملائنا \n من جميع أنحاء العالم.",
         },
         "en": {
           "arabic": "Arabic",
@@ -76,6 +89,19 @@ class MyTranslation extends Translations {
           "phone": "Phone",
           "enter_your_phone": "Enter Your Phone",
           "already_have_an_account": "Already have an account ?",
+          "continue": "Continue",
+          "choose_product": "Choose Product",
+          "we_have_hundred_product":
+              "We Have a 100k Product , Choose \n Your Product From  Our \n E-commerce Shop",
+          "easy_and_safe_payment": "Easy And Safe Payment",
+          "track_your_order": "Track Your Order",
+          "fast_delivery": "Fast Delivery",
+          "best_tracker_has_been_used":
+              "Best Tracker has been Used For \n Track your order. You'll know where \n your product is at the moment.",
+          "reliable_and_fast_delivery":
+              "Reliable And Fast Delivery. We \n Deliver your product the fastest \n way possible.",
+          "easy_checkout_safe_payment":
+              "Easy Checkout & Safe Payment \n method. Trusted by our Customers \n from all over the world.",
         },
       };
 }

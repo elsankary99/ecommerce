@@ -13,86 +13,89 @@ class SignUP extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SignUpControllerImp controller = Get.put(SignUpControllerImp());
     return Scaffold(
-      backgroundColor: AppColor.backGroundColor,
-      appBar: AppBar(
         backgroundColor: AppColor.backGroundColor,
-        centerTitle: true,
-        title: Text(
-          "sign_up".tr,
-          style: Theme.of(context)
-              .textTheme
-              .titleLarge!
-              .copyWith(color: AppColor.grey),
+        appBar: AppBar(
+          backgroundColor: AppColor.backGroundColor,
+          centerTitle: true,
+          title: Text(
+            "sign_up".tr,
+            style: Theme.of(context)
+                .textTheme
+                .titleLarge!
+                .copyWith(color: AppColor.grey),
+          ),
+          elevation: 0,
         ),
-        elevation: 0,
-      ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
-        child: Form(
-          key: controller.formState,
-          child: ListView(children: [
-            const SizedBox(height: 15),
-            CustomTextBodyAuth(
-                titleLarge: "welcome_back".tr,
-                titleSmall: 'sign_in_with_email'.tr
-                // "Sign Up With Your Email And Password \n OR Continue With Social Media",
-                ),
-            const SizedBox(height: 30),
-            CustomTextFormAuth(
-              validator: (val) {
-                return validInput(val!, 5, 40, "username");
-              },
-              controller: controller.userName,
-              labelText: "username".tr,
-              hintText: "enter_your_username".tr,
-              icon: Icons.person_3_outlined,
-            ),
-            CustomTextFormAuth(
-              validator: (val) {
-                return validInput(val!, 5, 100, "email");
-              },
-              controller: controller.email,
-              labelText: "email".tr,
-              hintText: "enter_your_email".tr,
-              icon: Icons.email_outlined,
-            ),
-            CustomTextFormAuth(
-              validator: (val) {
-                return validInput(val!, 7, 11, "phone");
-              },
-              controller: controller.phone,
-              labelText: "phone".tr,
-              hintText: "enter_your_phone".tr,
-              icon: Icons.phone_android_outlined,
-            ),
-            CustomTextFormAuth(
-              validator: (val) {
-                return validInput(val!, 5, 40, "password");
-              },
-              controller: controller.password,
-              labelText: "password".tr,
-              hintText: "enter_your_password".tr,
-              icon: Icons.lock_outlined,
-            ),
-            CustomButtonAuth(
-              text: "sign_up".tr,
-              onPressed: () {
-                controller.signUp();
-              },
-            ),
-            const SizedBox(height: 30),
-            CustomTextSignUpOrSignIn(
-              onTap: () {
-                controller.goToSignIn();
-              },
-              textOne: "already_have_an_account".tr,
-              textTwo: 'sign_in'.tr,
-            )
-          ]),
-        ),
-      ),
-    );
+        body: GetBuilder<SignUpControllerImp>(
+          builder: (controller) {
+            return Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+              child: Form(
+                key: controller.formState,
+                child: ListView(children: [
+                  const SizedBox(height: 15),
+                  CustomTextBodyAuth(
+                      titleLarge: "welcome_back".tr,
+                      titleSmall: 'sign_in_with_email'.tr
+                      // "Sign Up With Your Email And Password \n OR Continue With Social Media",
+                      ),
+                  const SizedBox(height: 30),
+                  CustomTextFormAuth(
+                    validator: (val) {
+                      return validInput(val!, 5, 40, "username");
+                    },
+                    controller: controller.userName,
+                    labelText: "username".tr,
+                    hintText: "enter_your_username".tr,
+                    icon: Icons.person_3_outlined,
+                  ),
+                  CustomTextFormAuth(
+                    validator: (val) {
+                      return validInput(val!, 5, 100, "email");
+                    },
+                    controller: controller.email,
+                    labelText: "email".tr,
+                    hintText: "enter_your_email".tr,
+                    icon: Icons.email_outlined,
+                  ),
+                  CustomTextFormAuth(
+                    validator: (val) {
+                      return validInput(val!, 7, 11, "phone");
+                    },
+                    isNumber: true,
+                    controller: controller.phone,
+                    labelText: "phone".tr,
+                    hintText: "enter_your_phone".tr,
+                    icon: Icons.phone_android_outlined,
+                  ),
+                  CustomTextFormAuth(
+                    validator: (val) {
+                      return validInput(val!, 5, 40, "password");
+                    },
+                    controller: controller.password,
+                    labelText: "password".tr,
+                    hintText: "enter_your_password".tr,
+                    icon: Icons.lock_outlined,
+                  ),
+                  CustomButtonAuth(
+                    text: "sign_up".tr,
+                    onPressed: () {
+                      controller.signUp();
+                    },
+                  ),
+                  const SizedBox(height: 30),
+                  CustomTextSignUpOrSignIn(
+                    onTap: () {
+                      controller.goToSignIn();
+                    },
+                    textOne: "already_have_an_account".tr,
+                    textTwo: 'sign_in'.tr,
+                  )
+                ]),
+              ),
+            );
+          },
+        ));
   }
 }

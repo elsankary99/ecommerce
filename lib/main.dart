@@ -1,3 +1,4 @@
+import 'package:ecommerce/binding.dart';
 import 'package:ecommerce/core/localization/change_local.dart';
 import 'package:ecommerce/core/localization/translations.dart';
 import 'package:ecommerce/core/service/services.dart';
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
       theme: controller.appTheme,
       debugShowCheckedModeBanner: false,
       routes: routes,
+      initialBinding: MyBinding(),
       home: const Language(),
     );
   }

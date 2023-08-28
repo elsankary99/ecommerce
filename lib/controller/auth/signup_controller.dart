@@ -18,7 +18,7 @@ class SignUpControllerImp extends SignUpController {
   signUp() {
     var formData = formState.currentState;
     if (formData!.validate()) {
-      Get.offNamed(AppRoute.checkEmail);
+      Get.toNamed(AppRoute.verifyCodeSignUp);
       print("+======Success======+");
     } else {
       print("+======Failure======+");

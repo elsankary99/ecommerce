@@ -6,18 +6,20 @@ import 'package:get/get.dart';
 Future<bool> alertExitApp() {
   Get.defaultDialog(
       title: "تنبيه",
-      titleStyle: const TextStyle(
-          color: AppColor.primaryColor, fontWeight: FontWeight.bold),
+      titleStyle:
+          const TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
       middleText: "هل تريد الخروج من التطبيق",
       actions: [
         ElevatedButton(
             style: ButtonStyle(
-                backgroundColor:
-                    MaterialStateProperty.all(AppColor.primaryColor)),
+                backgroundColor: MaterialStateProperty.all(Colors.red)),
             onPressed: () {
               exit(0);
             },
             child: const Text("تاكيد")),
+        const SizedBox(
+          width: 60,
+        ),
         ElevatedButton(
             style: ButtonStyle(
                 backgroundColor:

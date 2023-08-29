@@ -18,7 +18,7 @@ class ForgetPasswordControllerImp extends ForgetPasswordController {
   goToVerifyCode() {
     var formData = formState.currentState;
     if (formData!.validate()) {
-      Get.offNamed(AppRoute.verifyCode);
+      Get.toNamed(AppRoute.verifyCode);
       print("+======Success======+");
     } else {
       print("+======Failure======+");

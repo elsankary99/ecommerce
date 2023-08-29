@@ -54,14 +54,20 @@ class Login extends StatelessWidget {
                 hintText: "enter_your_email".tr,
                 icon: Icons.email_outlined,
               ),
-              CustomTextFormAuth(
-                validator: (val) {
-                  return validInput(val!, 5, 100, "password");
-                },
-                controller: controller.password,
-                labelText: "password".tr,
-                hintText: "enter_your_password".tr,
-                icon: Icons.lock_outlined,
+              GetBuilder<LoginControllerImp>(
+                builder: (controller) => CustomTextFormAuth(
+                  validator: (val) {
+                    return validInput(val!, 5, 100, "password");
+                  },
+                  controller: controller.password,
+                  obscureText: controller.isShowPassword,
+                  onTapIcon: () {
+                    controller.showPassword();
+                  },
+                  labelText: "password".tr,
+                  hintText: "enter_your_password".tr,
+                  icon: Icons.lock_outlined,
+                ),
               ),
               InkWell(
                 onTap: () {

@@ -1,9 +1,7 @@
-import 'package:ecommerce/binding.dart';
 import 'package:ecommerce/core/localization/change_local.dart';
 import 'package:ecommerce/core/localization/translations.dart';
 import 'package:ecommerce/core/service/services.dart';
 import 'package:ecommerce/router.dart';
-import 'package:ecommerce/view/screen/auth/language.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -26,9 +24,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: controller.appTheme,
       debugShowCheckedModeBanner: false,
-      routes: routes,
-      initialBinding: MyBinding(),
-      home: const Language(),
+      getPages: routes,
     );
   }
 }
